@@ -6,13 +6,19 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <header>
     <h1 class="logo">Portfolio</h1>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -45,7 +51,7 @@
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          Hi, I'm <strong>Sathish</strong> — Hi, I’m Sathish — a dedicated web designer and frontend developer passionate about creating clean, modern, and user-friendly interfaces. Skilled in HTML, CSS, and JavaScript, I transform ideas into engaging digital experiences with responsive designs that work seamlessly across all devices.
+          Hi, I'm <strong>Sathish</strong> — a dedicated web designer and frontend developer passionate about creating clean, modern, and user-friendly interfaces. Skilled in HTML, CSS, and JavaScript, I transform ideas into engaging digital experiences with responsive designs that work seamlessly across all devices.
         </p>
       </div>
     </div>
@@ -130,33 +136,16 @@
     </ul>
   </section>
 
-<section id="contact" class="section">
-  <h2>Contact Me</h2>
-  <p>You can reach out to me via email, Whatsapp, LinkedIn, or view my resume:</p>
-  <ul style="list-style: none; padding: 0; font-size: 18px;">
-    <li>
-      <a href="mailto:msathish.dev@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i> 
-      </a>
-    </li>
-    <li>
-      <a href="https://wa.me/919840194915" target="_blank">
-        <i class="fab fa-whatsapp"></i> 
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/sathish-cs/" target="_blank">
-        <i class="fab fa-linkedin"></i> 
-      </a>
-    </li>
-    <li>
-      <a href="https://drive.google.com/file/d/13bsn0sFppobNY9WuU8ii53zrPmCSP3ha/view?usp=drivesdk" target="_blank">
-        <i class="fas fa-file-alt"></i> 
-      </a>
-    </li>
-  </ul>
-</section>
-
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>You can reach out to me via email, Whatsapp, LinkedIn, or view my resume:</p>
+    <ul style="list-style: none; padding: 0; font-size: 18px;">
+      <li><a href="mailto:msathish.dev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="https://wa.me/919840194915" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/sathish-cs/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://drive.google.com/file/d/13bsn0sFppobNY9WuU8ii53zrPmCSP3ha/view?usp=drivesdk" target="_blank"><i class="fas fa-file-alt"></i></a></li>
+    </ul>
+  </section>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -169,8 +158,15 @@
         });
       }, { threshold: 0.4 });
       sections.forEach(section => observer.observe(section));
+
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
     });
   </script>
-
 </body>
 </html>
+
