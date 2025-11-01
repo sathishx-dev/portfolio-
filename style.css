@@ -309,6 +309,7 @@ header {
   height: 100%;
   background: white center/contain no-repeat var(--img-url);
 }
+
 #projects {
   text-align: center;
   padding: 70px 30px;
@@ -384,7 +385,6 @@ header {
   color: var(--primary-color);
 }
 
-
 #achievements {
   background: var(--white);
   padding: 40px 20px;
@@ -458,7 +458,7 @@ header {
 #contact ul {
   display: flex;
   justify-content: center;
-  gap: 30px; /* space between icons */
+  gap: 30px;
   padding: 0;
   margin-top: 20px;
 }
@@ -511,3 +511,20 @@ header {
   .hero-text h1 { font-size: 36px; }
   .hero-image img { width: 200px; height: 200px; }
 }
+
+@media (max-width: 480px) {
+  header { padding: 20px; flex-direction: column; gap: 10px; }
+  .nav-links { flex-direction: column; gap: 10px; }
+  .hero { padding-top: 140px; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p { font-size: 14px; }
+  .btn { padding: 10px 20px; font-size: 14px; }
+  .hero-image img { width: 160px; height: 160px; }
+  .about-wrapper { flex-direction: column; padding: 20px; }
+  .about-image img { width: 260px; height: 300px; }
+  #projects h2 { font-size: 28px; }
+  .project-card { margin: 0 10px; }
+  #achievements li { font-size: 16px; flex-direction: column; text-align: center; gap: 8px; }
+  #contact ul { flex-direction: column; gap: 15px; }
+}
+
