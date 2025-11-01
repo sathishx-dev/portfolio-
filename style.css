@@ -384,7 +384,33 @@ header {
 .links a:hover {
   color: var(--primary-color);
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 110;
+}
 
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 #achievements {
   background: var(--white);
   padding: 40px 20px;
@@ -509,7 +535,35 @@ header {
   .container { padding: 20px; }
   .hero { flex-direction: column; text-align: center; }
   .hero-text h1 { font-size: 36px; }
-  .hero-image img { width: 200px; height: 200px; }
+  .hero-image img { width: 200px; height: 200px; }nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--white);
+    width: 100%;
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -525,6 +579,34 @@ header {
   #projects h2 { font-size: 28px; }
   .project-card { margin: 0 10px; }
   #achievements li { font-size: 16px; flex-direction: column; text-align: center; gap: 8px; }
-  #contact ul { flex-direction: column; gap: 15px; }
+  #contact ul { flex-direction: column; gap: 15px; }nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--white);
+    width: 100%;
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
 }
 
